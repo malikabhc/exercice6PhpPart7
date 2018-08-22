@@ -9,23 +9,23 @@
             <?php
             if (isset($_POST['submit'])) {
                 if (!empty($_POST['civility'])) {
-                    echo $_POST ['civility'];
+                    echo $_POST ['civility'] . ' ';
                 } else {
-                    echo 'Veuillez entrer votre civilité';
+                    echo 'Veuillez entrer votre civilité ';
                 }
                 if (!empty($_POST['lastname'])) {
-                    echo $_POST ['lastname'];
+                    echo $_POST ['lastname'] . ' ';
                 } else {
-                    echo 'Veuillez entrer votre nom';
+                    echo 'Veuillez entrer votre nom ';
                 }
                 if (!empty($_POST['firstname'])) {
-                    echo $_POST ['firstname'];
+                    echo $_POST ['firstname'] . ' ';
                 } else {
-                    echo 'Veuillez entrer votre prénom';
+                    echo 'Veuillez entrer votre prénom ';
                 }
             } else {
                 ?>
-            <form action="index.php" method="GET">
+            <form action="index.php" method="POST">
                 <label for="civility">Civilité :</label>
                 <select name="civility" id="civility">
                     <!-- option selected disabled pratique pour éviter de valider qqch par erreur dans une liste déroulante -->
